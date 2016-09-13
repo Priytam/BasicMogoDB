@@ -1,0 +1,188 @@
+<div class="row centered-form">
+    <div class="col-xs-12 col-sm-8 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add new student {{vm.err}}</h3>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" ng-model="vm.std.fst_name" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" ng-model="vm.std.lst_name" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <select ng-model="vm.std.college" class="form-control input-sm" ng-options='clg.name for clg in vm.clgs'></select>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <select ng-model="vm.std.department" class="form-control input-sm" ng-options='dpt.name for dpt in vm.dpts'></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="number" min="18" max="26" ng-model="vm.std.age" name="std_age" id="std_age" class="form-control input-sm" placeholder="Age">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <select  ng-model="vm.std.sex" name="std_sex" id="std_sex" class="form-control input-sm">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="email" ng-model="vm.std.email" name="std_email" id="std_email" class="form-control input-sm" placeholder="Student Email">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="number" ng-model="vm.std.contact" name="std_contact" id="std_contact" class="form-control input-sm" placeholder="Student Contact">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                            <div class="form-group">
+                                <input type="text" ng-model="vm.std.city" name="std_city" id="std_city" class="form-control input-sm" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                            <div class="form-group">
+                                <input type="text" ng-model="vm.std.state" name="std_state" id="std_state" class="form-control input-sm" placeholder="State">
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                            <div class="form-group">
+                                <input type="text" ng-model="vm.std.country" name="std_country" id="std_country" class="form-control input-sm" placeholder="Country">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" ng-click="vm.saveStudent()" class="btn btn-info btn-block">Create </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add new department</h3>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" ng-model="vm.dpt.name" name="depart_name" id="depart_name" class="form-control input-sm" placeholder="Department Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" ng-model="vm.dpt.course" name="course" id="course" class="form-control input-sm" placeholder="Comma separated Courses">
+                    </div>
+                    <button type="submit" ng-click="vm.addDepartment()" class="btn btn-info btn-block">Create </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add new college</h3>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" ng-model="vm.clg.name" name="clg_name" id="clg_name" class="form-control input-sm" placeholder="College Name">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="email" ng-model="vm.clg.email" name="clg_email" id="clg_email" class="form-control input-sm" placeholder="College Email">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="number" ng-model="vm.clg.contact" name="clg_contact" id="clg_contact" class="form-control input-sm" placeholder="College Contact">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                            <div class="form-group">
+                                <input type="text" ng-model="vm.clg.city" name="clg_city" id="clg_city" class="form-control input-sm" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                            <div class="form-group">
+                                <input type="text" ng-model="vm.clg.state" name="clg_state" id="clg_state" class="form-control input-sm" placeholder="State">
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4">
+                            <div class="form-group">
+                                <input type="text" ng-model="vm.clg.country" name="clg_country" id="clg_country" class="form-control input-sm" placeholder="Country">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" ng-click="vm.addCollege()" class="btn btn-info btn-block">Create </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row give-margin-30">
+    <div class="col-sm-4">
+        <div>
+            <div class="count-selected">
+                <article>
+                    <div class="divider text-center">
+                        <h2><strong> {{vm.totalStudent}} </strong></h2>
+                        <a href="/#/student" class="btn btn-success"> Students </a>
+                    </div>
+                </article>
+                <figure style="background-image: url(http://136.243.1.253/~creolitic/bootsnipp/home.jpg)"></figure>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div>
+            <div class="count-selected">
+                <article>
+                    <div class="divider text-center">
+                        <h2><strong> {{vm.totalDepts}} </strong></h2>
+                        <a href="/#/dpt" class="btn btn-success"> Departments </a>
+                    </div>
+                </article>
+                <figure style="background-image: url(http://136.243.1.253/~creolitic/bootsnipp/home.jpg)"></figure>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div>
+            <div class="count-selected">
+                <article>
+                        <div class="divider text-center">
+                            <h2><strong> {{vm.totalClg}} </strong></h2>
+                            <a href="/#/clg" class="btn btn-success"> Colleges </a>
+                        </div>
+                </article>
+                <figure style="background-image: url(http://136.243.1.253/~creolitic/bootsnipp/home.jpg)"></figure>
+            </div>
+        </div>
+    </div>
+</div>

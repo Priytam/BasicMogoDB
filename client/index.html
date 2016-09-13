@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style/main.css">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="app">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/#/">Student DB (Basic mongo db Example)</a>
+        </div>
+    </div>
+</nav>
+
+
+<div id="loaderDiv" loader>
+    <img src="img/loading.gif" class="ajax-loader"/>
+</div>
+
+<div class="container-fluid" style="margin-top: 2%">
+    <ng-view></ng-view>
+</div>
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/jquery/dist/jquery.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+
+<!--
+* main module
+-->
+
+<script src="module.js"></script>
+
+<!--
+* Module Core
+-->
+<script src="core/module.js"></script>
+<script src="core/config.js"></script>
+<script src="core/run.js"></script>
+<script src="core/interceptor.js"></script>
+<script src="core/directive.js"></script>
+<!--
+* Module main
+-->
+<script src="main/main.module.js"></script>
+<script src="main/config.route.js"></script>
+<script src="main/main.ctrl.js"></script>
+<!--
+* Module student
+-->
+<script src="student/student.module.js"></script>
+<script src="student/config.route.js"></script>
+<script src="student/student.api.js"></script>
+<script src="student/student.js"></script>
+<script src="student/student.ctrl.js"></script>
+
+<!--
+* Module department
+-->
+<script src="department/dpt.module.js"></script>
+<script src="department/config.route.js"></script>
+<script src="department/dpt.api.js"></script>
+<script src="department/dpt.js"></script>
+<script src="department/dpt.ctrl.js"></script>
+
+<!--
+* Module department
+-->
+<script src="college/clg.module.js"></script>
+<script src="college/config.route.js"></script>
+<script src="college/clg.api.js"></script>
+<script src="college/clg.js"></script>
+<script src="college/clg.ctrl.js"></script>
+
+</body>
+</html>
