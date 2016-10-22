@@ -27,3 +27,15 @@
 
 
 ## ScreenShot
+
+### Landing page 
+![alt tag](https://github.com/Priytam/BasicMogoDB/blob/master/screenshot/landing.jpg)
+
+### College page 
+![alt tag](https://github.com/Priytam/BasicMogoDB/blob/master/screenshot/college.jpg)
+
+### Student page 
+![alt tag](https://github.com/Priytam/BasicMogoDB/blob/master/screenshot/student.jpg)
+
+### Department page 
+![alt tag](https://github.com/Priytam/BasicMogoDB/blob/master/screenshot/department.jpg)
