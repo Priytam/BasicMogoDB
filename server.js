@@ -14,7 +14,7 @@ var departmentRoute = require('./server/department/route/route');
 
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/myappdatabase');
+mongoose.connect('mongodb://pjpandey:pjpandey@ds147882.mlab.com:47882/myappdatabase');
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({'extended':'true'}));
