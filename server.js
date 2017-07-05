@@ -28,7 +28,7 @@ studentRoute(app);
 collegeRoute(app);
 departmentRoute(app);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 console.log("App listening on port 3000");
 
 //expose app
